@@ -3,7 +3,7 @@ import angular = require('angular')
 import FileUploader from './file-uploader/file-uploader.module';
 
 angular
-  .module('app', [require('angular-route'), FileUploader])
+  .module('app', [require('angular-route'), 'ngDroplet', FileUploader])
   .config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.when('/file-uploader', {

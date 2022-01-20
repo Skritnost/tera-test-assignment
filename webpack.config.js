@@ -6,6 +6,9 @@ module.exports = {
   mode: 'development',
   entry: {
     app: path.join(__dirname, 'app/app.module.ts'),
+    vendor: [
+      'ng-droplet',
+    ],
   },
   output: {
     filename: '[name]-bundle.js',
@@ -37,8 +40,8 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: /node_modules/
       },
       {

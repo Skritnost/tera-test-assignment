@@ -1,7 +1,7 @@
 import angular = require('angular')
-import FileUploader from "./component/file-uploader.component";
+import FileUploaderComponent from './component/file-uploader.component';
 
 export default angular
   .module('fileUploader', [])
-  .component('fileUploader', FileUploader)
+  .component('fileUploader', FileUploaderComponent)
 	.name
